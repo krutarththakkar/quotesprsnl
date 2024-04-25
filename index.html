@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote of the Day</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .quote-container {
+            width: 80%;
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .quote {
+            font-size: 24px;
+        }
+        .author {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        <div class="quote" id="quote">"The quote will appear here."</div>
+        <div class="author" id="author">- Author Name</div>
+    </div>
+    <script>
+        const quotes = [
+            { text: "Do not believe in things blindly.", author: "Tenali Raman" },
+            { text: "Never be arrogant, however knowledgeable or wise you are.", author: "Tenali Raman" },
+            { text: "It is always best not to chase after impossible dreams.", author: "Tenali Raman" },
+            { text: "Greediness will get you in trouble.", author: "Tenali Raman" },
+            { text: "Education is the best friend. An educated person is respected everywhere. Education beats the beauty and the youth.", author: "Chanakya" },
+            { text: "As soon as the fear approaches near, attack and destroy it.", author: "Chanakya" },
+            { text: "The biggest guru-mantra is: never share your secrets with anybody. It will destroy you.", author: "Chanakya" },
+            { text: "Before you start some work, always ask yourself three questions - Why am I doing it, What the results might be and Will I be successful. Only when you think deeply and find satisfactory answers to these questions, go ahead.", author: "Chanakya" },
+            { text: "There is some self-interest behind every friendship. There is no friendship without self-interests. This is a bitter truth.", author: "Chanakya" },
+            { text: "A person should not be too honest. Straight trees are cut first and honest people are screwed first.", author: "Chanakya" },
+            { text: "God does not dwell in the wooden, stony, or earthen idols. His abode is in our feelings, our thoughts.", author: "Chanakya" },
+            { text: "Learn from other people's mistakes... you can't live long enough to make them all yourselves.", author: "Chanakya" }
+        ];
+
+        function displayQuote() {
+            const quote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote').textContent = `"${quote.text}"`;
+            document.getElementById('author').textContent = `- ${quote.author}`;
+        }
+
+        window.onload = displayQuote;
+    </script>
+</body>
+</html>
